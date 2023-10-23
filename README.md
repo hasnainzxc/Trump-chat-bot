@@ -1,29 +1,32 @@
 # This is an Open Source Project
 
-![chrome-capture-2023-9-23](https://github.com/Hasnainzxc/Trump-chat-bot/assets/52049324/d127d500-afb9-48a1-8e5c-2a765fbdc911)
 
-https://main--sunny-begonia-4b4da0.netlify.app/
+# Trump Chatbot - Make America Great Again!
+![Uploading chrome-capture-2023-9-23 (1).png…]()
 
+![Trump Chatbot](https://main--sunny-begonia-4b4da0.netlify.app/)
 
-Chat to Kanye currently uses two public APIs and a handful of string arrays to create a response to your message.
+[Live Demo](https://main--sunny-begonia-4b4da0.netlify.app/)
 
-## How to interact with Kanye
+The Trump Chatbot project is an open-source conversational bot that simulates interactions with Donald Trump. It uses various APIs and predefined responses to engage with users.
 
-- Kanye will greet you by using simple keywords like "hey", "hello", etc. e.g: "Sup Kanye"
-- You can part ways with Kanye by using keywords like "bye", "goodbye", "cya" e.g: "Later Kanye!"
-- Kanye will give you the time by using the keyword "time" e.g: "What time is it Kanye?"
-- Ask Kanye his birthday by using keyword "birthday", "age" e.g: "When is your birthday?"
-- Kanye can tell you your fortune, but using the "fortune" keyword, e.g: "Hey kanye, whats my fortune?"
-- If you'd like to ask Kanye about his now ex-wife Kim Kardashian, use keywords "Kim" or "Kardashian" e.g: "Hows Kim yeezy?"
-- If you'd like Kanye to provide you with some food ideas, simply ask him about "chicken", "rice" or many other key words and he will provide you with a random recipe for the included keyword e.g: "Kanye I want some tacos". This is done by using the MealDB API.
-- Kanye will provide you with one of his memorable quotes by typing anything in the textbox that doesnt include many of the key words provided. This is done by using the kanye.rest API.
+## How to Interact with Trump
 
-## How to contribute
+- Start the conversation with a greeting such as "hi," "hello," or "yo," for example, "Hello, Trump!"
+- Say goodbye with keywords like "bye," "goodbye," or "cya," for instance, "Goodbye, Trump!"
+- Ask Trump for the current time using the word "time," like "What time is it, Trump?"
+- Inquire about Trump's birthday or age by using "birthday" or "age," such as "When is your birthday, Trump?"
+- Seek a fortune by mentioning "fortune," for example, "Hey Trump, what's my fortune?"
+- If you'd like to inquire about Melania or the Trump family, use keywords like "Melania," "Trump," "Kardashian," or "Kim," e.g., "How's Melania, Trump?"
+- If you're looking for food suggestions, mention food items like "chicken," "rice," or other keywords, and Trump will provide you with a random recipe using the MealDB API. For instance, "Trump, I want some tacos."
+- When you ask something that doesn't match the predefined keywords, Trump will respond with one of his memorable quotes, using the kanye.rest API.
 
-- Add new responses to the strings to increase random responses
-- Add a new API that links on a question
-- Get Food API to work along side the Kanye Rest API ✅ fixed!
-- Have a "..." animation between texts
-- Get twitter API for kanye tweets
-- Add a message where he sends a selfie
-- Use fisher-yates algorithm to prefent repeating the same message from Kanye.
+## How to Contribute
+
+- Add new responses to increase the variety of Trump's answers.
+- Integrate new APIs to expand the range of questions and responses.
+- Ensure the Food API works seamlessly with the Trump Rest API.
+- Implement a "..." animation between messages.
+- Integrate the Twitter API to fetch Trump's tweets.
+- Add a feature where Trump sends a virtual selfie.
+- Use the Fisher-Yates algorithm to prevent repetitive responses.
