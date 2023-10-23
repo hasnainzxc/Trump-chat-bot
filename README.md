@@ -1,5 +1,10 @@
 # This is an Open Source Project
 
+![chrome-capture-2023-9-23](https://github.com/Hasnainzxc/Trump-chat-bot/assets/52049324/d127d500-afb9-48a1-8e5c-2a765fbdc911)
+
+https://main--sunny-begonia-4b4da0.netlify.app/
+
+
 Chat to Kanye currently uses two public APIs and a handful of string arrays to create a response to your message.
 
 ## How to interact with Kanye
