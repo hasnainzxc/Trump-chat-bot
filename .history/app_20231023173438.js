@@ -53,6 +53,23 @@ const responseForMelania = [
   "Let's change the subject.. 😒",
 ];
 
+const matchForFood = [
+  "burger",
+  "burgers",
+  "cheeseburger",
+  "taco",
+  "tacos",
+  "steak",
+  "chicken",
+  "soup",
+  "fries",
+  "pizza",
+  "pasta",
+  "sushi",
+  "salad",
+  "lobster",
+];
+
 const matchesForDating = ["dating", "who you been dating"];
 const responseForDating = [
   "I've been a bit busy with politics to date lately.",
@@ -88,22 +105,6 @@ const spicyResponses = [
   "My favorite politician? Well, I'd say I'm my own favorite politician!",
   "Why did the chicken cross the road? To make America great again!",
   "The secret to great hair is a mystery known only to a select few, very few, believe me!",
-];
-const matchForFood = [
-  "burger",
-  "burgers",
-  "cheeseburger",
-  "taco",
-  "tacos",
-  "steak",
-  "chicken",
-  "soup",
-  "fries",
-  "pizza",
-  "pasta",
-  "sushi",
-  "salad",
-  "lobster",
 ];
 
 const trumpReplyAPI = () => {
