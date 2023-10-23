@@ -5,51 +5,64 @@ const btn = document.getElementById("btn");
 // Input matches
 const matchesForHello = ["hi", "howdy", "hello", "yo", "hey", "sup"];
 const responseForHello = [
-  "Yo it's Donald Trump, whats up?",
-  "Ayo, Donald Trump here",
+  "Yo it's Kanye, whats up?",
+  "Ayo, Kanye here",
   "Eyyy wassup!!",
-  "Hey, hope you're good.. that was a nice greeting.. but I had the greatest presidency of all time!",
+  "Hey, hope you're good.. that was a nice greeting.. but Beyonce has the greatest message of all time!",
   "Hello? How'd you get my number?",
-  "Yo.. any idea where Melania's at? I miss her..",
+  "Yo.. any idea where Kim's at? I miss her..",
 ];
 
 const matchesForGoodBye = ["cya", "bye", "adios", "laters", "goodbye"];
 const responseForGoodBye = [
   "Peace",
-  "Laters..Don't forget to support me in the next election!!",
-  "Yoo! Dont go! I'm so lonely without Melania..",
+  "Laters..Dont forget to buy my next album!!",
+  "Yoo! Dont go! I'm so lonely since Kim left.. ",
 ];
 
 const matchesForTime = ["time", "time?"];
 const responseForTime = [
-  `It's my time.. Make America Great Again!! But I'm pretty sure your time is.. ${new Date().toLocaleTimeString()}`,
+  `It's my time.. Yeezy Season!! But I'm pretty sure your time is.. ${new Date().toLocaleTimeString()}`,
 ];
 
 const matchForFortune = ["fortune", "fortune?"];
 const responseForFortune = [
   "A beautiful, smart, and loving person will be coming into your life",
-  "A dubious friend may be an enemy in disguise",
-  "A strong economy is a strong defense",
-  "A wall on the southern border will put us on the right track",
-  "A great nation needs strong leadership",
-  "A friend asks only for your loyalty, not your money",
-  "A friend is a supporter you give yourself",
-  "Melania is not your wife, she's mine!",
-  "A wise leader knows how to make great deals",
+  "A dubious friend may be an enemy in camouflage",
+  "A faithful friend is a strong defense",
+  "A feather in the hand is better than a bird in the air",
+  "A fresh start will put you on your way",
+  "A friend asks only for your time not your money",
+  "A friend is a present you give yourself",
+  "Kim is not your wife, shes mine!",
+  "A gambler not only will lose what he has, but also will lose what he doesn't have",
+  "A golden egg of opportunity falls into your lap this month",
+  "A good friendship is often more important than a passionate romance",
+  "A good time to finish up old tasks",
+  "A hunch is creativity trying to tell you something",
+  "A lifetime friend shall soon be made",
+  "A lifetime of happiness lies ahead of you",
+  "A new perspective will come with the new year",
+  "A pleasant surprise is waiting for you",
+  "A short pencil is usually better than a long memory any day",
+  "Be careful or you could fall for some tricks today",
+  "Because you demand more from yourself, others respect you deeply",
+  "Believe in yourself and others will too",
+  "Chance favors those in motion",
 ];
 
 const matchForAge = ["old", "age", "born", "born?", "age?", "old?"];
 const responseForAge = [
-  "I don't like talking about my age, but let me tell you, I was born on June 14, 1946, in Queens, New York City",
+  "I just dont care maaaannnn.. But let me tell you, I was born on June 8, 1977.. in Atlanta, GA",
 ];
 
 const matchForBirthday = ["birthday", "birthday?"];
-const responseForBirthday = ["Yeah, birthdays... mine is on June 14, 1946"];
+const responseForBirthday = ["Yeah.. birthdays.. mines June 8, 1977.. "];
 
-const matchForMelania = ["melania", "trump", "melania?", "trump?"];
-const responseForMelania = [
-  "Don't mention Melania, she's a great first lady!",
-  "Melania is doing a fantastic job, isn't she?",
+const matchForKim = ["kim", "kardashian", "kim?", "kardashian?"];
+const responseForKim = [
+  "Yo get my wifes name out your mouth!!",
+  "I dont speak about her anymore",
   "Let's change the subject.. 😒",
 ];
 
@@ -59,42 +72,43 @@ const matchForFood = [
   "cheeseburger",
   "taco",
   "tacos",
-  "steak",
+  "salmon",
   "chicken",
   "soup",
-  "fries",
+  "rice",
+  "curry",
   "pizza",
   "pasta",
-  "sushi",
+  "tuna",
   "salad",
-  "lobster",
+  "fish",
 ];
 
 // Response Functions
 
-const trumpReplyAPI = () => {
-  const TRUMP_API = "https://api.trump.rest/";
+const kanyeReplyAPI = () => {
+  const KANYE_API = "https://api.kanye.rest/";
 
   setTimeout(() => {
     axios
-      .get(TRUMP_API)
+      .get(KANYE_API)
       .then((response) => {
         const quote = response.data.quote;
-        trumpReply(quote);
+        kanyeReply(quote);
       })
-      .catch((err) => console.error("Donald Trump API ERROR: ", err));
+      .catch((err) => console.error("Kanye West API ERROR: ", err));
 
-    const trumpReply = (reply) => {
-      const trumpReply = logThis(reply);
+    const kanyeReply = (reply) => {
+      const kanyeReply = logThis(reply);
       const para = document.createElement("p");
-      para.innerHTML = trumpReply;
-      para.classList.add("chat-box__trump-text");
+      para.innerHTML = kanyeReply;
+      para.classList.add("chat-box__kanye-text");
       chatBox.appendChild(para);
     };
   }, 2000);
 };
 
-const trumpFood = (foodItem) => {
+const kanyeFood = (foodItem) => {
   const MEALDB_API = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodItem}`;
   setTimeout(() => {
     axios
@@ -110,33 +124,33 @@ const trumpFood = (foodItem) => {
           mealURL: meal.strSource,
         };
         console.log(meals);
-        const reply = `You should try ${meals.mealName}.. here's a link..`;
-        trumpReply(reply, "p");
-        trumpReply(`${meals.mealURL}`, "a");
+        const reply = `Yo you should try ${meals.mealName}.. here's a link..`;
+        kanyeReply(reply, "p");
+        kanyeReply(`${meals.mealURL}`, "a");
       })
       .catch((err) => console.error("Meal DB API ERROR: ", err));
-    const trumpReply = (reply, tag) => {
+    const kanyeReply = (reply, tag) => {
       console.log(reply);
-      const trumpReply = logThis(reply);
+      const kanyeReply = logThis(reply);
       const para = document.createElement(tag);
       console.log(para.nodeName);
       if (para.nodeName === "A") {
-        para.setAttribute("href", trumpReply);
+        para.setAttribute("href", kanyeReply);
         para.setAttribute("target", "_blank");
       }
-      para.innerHTML = trumpReply;
-      para.classList.add("chat-box__trump-text");
+      para.innerHTML = kanyeReply;
+      para.classList.add("chat-box__kanye-text");
       chatBox.appendChild(para);
     };
   }, 2000);
 };
 
-const trumpResponse = (responseArray) => {
+const kanyeResponse = (responseArray) => {
   setTimeout(() => {
     const para = document.createElement("p");
     para.innerHTML =
       responseArray[Math.floor(Math.random() * responseArray.length)];
-    para.classList.add("chat-box__trump-text");
+    para.classList.add("chat-box__kanye-text");
     chatBox.appendChild(para);
   }, 2000);
 };
@@ -188,50 +202,50 @@ form.addEventListener("submit", (e) => {
       yourMessageArr.includes(element)
     );
     console.log(match);
-    trumpFood(match);
+    kanyeFood(match);
     return;
   }
 
-  // Melania Response
-  if (doesItMatch(yourMessageArr, matchForMelania)) {
-    trumpResponse(responseForMelania);
+  // Kim Response
+  if (doesItMatch(yourMessageArr, matchForKim)) {
+    kanyeResponse(responseForKim);
     return;
   }
 
   // Birthday Response
   if (doesItMatch(yourMessageArr, matchForBirthday)) {
-    trumpResponse(responseForBirthday);
+    kanyeResponse(responseForBirthday);
     return;
   }
 
   // Age Response
   if (doesItMatch(yourMessageArr, matchForAge)) {
-    trumpResponse(responseForAge);
+    kanyeResponse(responseForAge);
     return;
   }
 
   // Time Response
   if (doesItMatch(yourMessageArr, matchesForTime)) {
-    trumpResponse(responseForTime);
+    kanyeResponse(responseForTime);
     return;
   }
 
   // Fortune Response
   if (doesItMatch(yourMessageArr, matchForFortune)) {
-    trumpResponse(responseForFortune);
+    kanyeResponse(responseForFortune);
     return;
   }
 
   // Leaving Response
   if (doesItMatch(yourMessageArr, matchesForGoodBye)) {
-    trumpResponse(responseForGoodBye);
+    kanyeResponse(responseForGoodBye);
     return;
   }
   // Greeting Response
   if (doesItMatch(yourMessageArr, matchesForHello)) {
-    trumpResponse(responseForHello);
+    kanyeResponse(responseForHello);
   } else {
-    trumpReplyAPI();
+    kanyeReplyAPI();
   }
 });
 
@@ -239,9 +253,9 @@ form.addEventListener("submit", (e) => {
 const header = document.querySelector(".header__title");
 
 header.addEventListener("mouseenter", () => {
-  header.innerText = "How to interact with Donald Trump";
+  header.innerText = "How to interact with Kanye";
 });
 
 header.addEventListener("mouseleave", () => {
-  header.innerText = "Chat with Donald Trump";
+  header.innerText = "Chat with Kanye";
 });

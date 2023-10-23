@@ -69,9 +69,7 @@ const matchForFood = [
   "salad",
   "lobster",
 ];
-
 // Response Functions
-
 const trumpReplyAPI = () => {
   const TRUMP_API = "https://api.trump.rest/";
 
@@ -93,8 +91,7 @@ const trumpReplyAPI = () => {
     };
   }, 2000);
 };
-
-const trumpFood = (foodItem) => {
+const kanyeFood = (foodItem) => {
   const MEALDB_API = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodItem}`;
   setTimeout(() => {
     axios
@@ -110,33 +107,33 @@ const trumpFood = (foodItem) => {
           mealURL: meal.strSource,
         };
         console.log(meals);
-        const reply = `You should try ${meals.mealName}.. here's a link..`;
-        trumpReply(reply, "p");
-        trumpReply(`${meals.mealURL}`, "a");
+        const reply = `Yo you should try ${meals.mealName}.. here's a link..`;
+        kanyeReply(reply, "p");
+        kanyeReply(`${meals.mealURL}`, "a");
       })
       .catch((err) => console.error("Meal DB API ERROR: ", err));
-    const trumpReply = (reply, tag) => {
+    const kanyeReply = (reply, tag) => {
       console.log(reply);
-      const trumpReply = logThis(reply);
+      const kanyeReply = logThis(reply);
       const para = document.createElement(tag);
       console.log(para.nodeName);
       if (para.nodeName === "A") {
-        para.setAttribute("href", trumpReply);
+        para.setAttribute("href", kanyeReply);
         para.setAttribute("target", "_blank");
       }
-      para.innerHTML = trumpReply;
-      para.classList.add("chat-box__trump-text");
+      para.innerHTML = kanyeReply;
+      para.classList.add("chat-box__kanye-text");
       chatBox.appendChild(para);
     };
   }, 2000);
 };
 
-const trumpResponse = (responseArray) => {
+const kanyeResponse = (responseArray) => {
   setTimeout(() => {
     const para = document.createElement("p");
     para.innerHTML =
       responseArray[Math.floor(Math.random() * responseArray.length)];
-    para.classList.add("chat-box__trump-text");
+    para.classList.add("chat-box__kanye-text");
     chatBox.appendChild(para);
   }, 2000);
 };
@@ -188,50 +185,50 @@ form.addEventListener("submit", (e) => {
       yourMessageArr.includes(element)
     );
     console.log(match);
-    trumpFood(match);
+    kanyeFood(match);
     return;
   }
 
-  // Melania Response
-  if (doesItMatch(yourMessageArr, matchForMelania)) {
-    trumpResponse(responseForMelania);
+  // Kim Response
+  if (doesItMatch(yourMessageArr, matchForKim)) {
+    kanyeResponse(responseForKim);
     return;
   }
 
   // Birthday Response
   if (doesItMatch(yourMessageArr, matchForBirthday)) {
-    trumpResponse(responseForBirthday);
+    kanyeResponse(responseForBirthday);
     return;
   }
 
   // Age Response
   if (doesItMatch(yourMessageArr, matchForAge)) {
-    trumpResponse(responseForAge);
+    kanyeResponse(responseForAge);
     return;
   }
 
   // Time Response
   if (doesItMatch(yourMessageArr, matchesForTime)) {
-    trumpResponse(responseForTime);
+    kanyeResponse(responseForTime);
     return;
   }
 
   // Fortune Response
   if (doesItMatch(yourMessageArr, matchForFortune)) {
-    trumpResponse(responseForFortune);
+    kanyeResponse(responseForFortune);
     return;
   }
 
   // Leaving Response
   if (doesItMatch(yourMessageArr, matchesForGoodBye)) {
-    trumpResponse(responseForGoodBye);
+    kanyeResponse(responseForGoodBye);
     return;
   }
   // Greeting Response
   if (doesItMatch(yourMessageArr, matchesForHello)) {
-    trumpResponse(responseForHello);
+    kanyeResponse(responseForHello);
   } else {
-    trumpReplyAPI();
+    kanyeReplyAPI();
   }
 });
 
@@ -239,9 +236,9 @@ form.addEventListener("submit", (e) => {
 const header = document.querySelector(".header__title");
 
 header.addEventListener("mouseenter", () => {
-  header.innerText = "How to interact with Donald Trump";
+  header.innerText = "How to interact with Kanye";
 });
 
 header.addEventListener("mouseleave", () => {
-  header.innerText = "Chat with Donald Trump";
+  header.innerText = "Chat with trump";
 });

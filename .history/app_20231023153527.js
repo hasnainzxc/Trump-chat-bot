@@ -73,7 +73,7 @@ const matchForFood = [
 // Response Functions
 
 const trumpReplyAPI = () => {
-  const TRUMP_API = "https://api.trump.rest/";
+  const TRUMP_API = "https://api.kanye.rest//";
 
   setTimeout(() => {
     axios

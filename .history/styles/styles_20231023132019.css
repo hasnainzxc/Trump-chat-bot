@@ -29,8 +29,7 @@ body {
   }
 }
 
-input,
-select {
+input, select {
   font-size: 100%;
 }
 
@@ -66,8 +65,7 @@ main {
   align-content: center;
   display: inline-block;
   border: 6px #0f0f0f solid;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 @media (min-width: 768px) {
   .phone__container {
@@ -131,9 +129,7 @@ main {
   border: transparent 1px solid;
   padding: 0.6rem;
 }
-.chat-box__user-text,
-.chat-box__trump-text {
-  /* Updated class name for Trump's responses */
+.chat-box__user-text, .chat-box__kanye-text {
   display: inline-block;
   max-width: 100%;
   overflow-wrap: break-word;
@@ -148,20 +144,18 @@ main {
 .chat-box__user-text {
   background-color: #dcf8c6;
 }
-.chat-box__trump-text {
-  /* Updated class name for Trump's responses */
+.chat-box__kanye-text {
   background-color: #fafafa;
 }
 
 .kanye__image {
-  /* Updated class name for Trump's image */
   height: 350px;
   position: absolute;
   top: 20px;
   left: -6px;
   z-index: -1;
   -webkit-animation: moveHead 10s infinite;
-  animation: moveHead 10s infinite;
+          animation: moveHead 10s infinite;
 }
 
 @-webkit-keyframes moveHead {
@@ -255,5 +249,4 @@ main {
 }
 .footer__list-item {
   padding: 0.5rem;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
